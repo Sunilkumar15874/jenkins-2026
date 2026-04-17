@@ -1,0 +1,22 @@
+pipeline {
+    agent any 
+    stages {
+         stage('Checkout') {
+              steps {
+                  checkout scm 
+              }
+         }
+         stage('Build') {
+             steps {
+                 echo 'BuildBuild steps yahan aayega'
+                 sh 'ls -la' // Check karne ke liye ki files aayi ya nahi
+             }
+         }
+         stage('Test') {
+             steps {
+                 echo 'Test command yahan lokho'
+             }
+          }
+     }
+}
+ 
