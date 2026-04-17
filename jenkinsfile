@@ -13,12 +13,12 @@ pipeline {
         stage('Start Nginx') {
             steps {
                 sh 'sudo systemctl start nginx'
-                sh 'sudo systemctl enable nginx' // Boot pe auto start
+                sh 'sudo systemctl enable nginx' 
             }
         stage('Verify') {
             steps {
                 sh 'sudo systemctl status nginx'
-                sh 'curl -I localhost' // Check kar raha hai ki chal raha hai ya nahi
+                sh 'curl -I localhost' 
             }
         }
     }
